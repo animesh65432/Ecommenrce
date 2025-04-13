@@ -1,7 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
+import { useRouter } from 'next/navigation'
 const Hero: React.FC = () => {
+    const router = useRouter()
+
+    const onclickhome = () => {
+        router.push("/home")
+    }
     return (
         <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center h-[80vh]">
             <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
@@ -61,10 +67,10 @@ const Hero: React.FC = () => {
                     }}
                     className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
                 >
-                    <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+                    <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900" onClick={onclickhome}>
                         Shop Now
                     </button>
-                    <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+                    <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900" onClick={onclickhome}>
                         Explore Categories
                     </button>
                 </motion.div>

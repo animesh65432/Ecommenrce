@@ -1,6 +1,6 @@
 "use client"
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header, Wrapper } from "@/components"
+import { Header, Wrapper, ContactSection } from "@/components"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +27,7 @@ export default function RootLayout({
         <Wrapper>
           <Header />
           {children}
+          <ContactSection />
         </Wrapper>
 
       </body>

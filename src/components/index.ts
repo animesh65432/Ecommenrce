@@ -10,6 +10,7 @@ import ContactSection from "./ContactSection";
 import FeaturesProducts from "./FeaturesProducts";
 import ProductsSkeleton from "./ProductsSkeleton";
 import Product from "./Product";
+import Products from "./home/Products";
+import FilterSection from "./home/FilterSection";
 
-
-export { Home, Header, Icon, ColorProvider, Wrapper, ThemedWrapper, MobileHeader, Hero, ContactSection, FeaturesProducts, ProductsSkeleton, Product }
+export { Home, Header, Icon, ColorProvider, Wrapper, ThemedWrapper, MobileHeader, Hero, ContactSection, FeaturesProducts, ProductsSkeleton, Product, FilterSection, Products }

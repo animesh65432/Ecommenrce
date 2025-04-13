@@ -6,7 +6,7 @@ import { useThemeColor } from "@/components/ColorProvider"
 const Header: React.FC = () => {
     const { color, ontoggole } = useThemeColor()
     return (
-        <header className='w-full h-[10vh] flex md:justify-around justify-around items-center p-8  sticky'>
+        <header className={` h-[10vh] flex md:justify-around justify-around items-center p-8 mb-10 sticky top-4 z-10 ${color ? "bg-white text-black" : "bg-black text-white"} w-[90vw] rounded-md m-auto`}>
             <nav className='md:hidden block'>
                 <MobileHeader />
             </nav>

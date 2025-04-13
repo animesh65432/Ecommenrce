@@ -13,6 +13,7 @@ const useProduct = () => {
         setloading(true)
         try {
             const reponse = await axios.get("/api/product")
+            console.log(reponse?.data)
             setProducts(reponse?.data?.products)
         } catch (error) {
             console.log(error)

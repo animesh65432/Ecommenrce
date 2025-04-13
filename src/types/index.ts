@@ -10,3 +10,20 @@ export type Producttype = {
         count: number;
     };
 };
+export interface Store {
+    products: Producttype[];
+    filteredProducts: Producttype[];
+    filters: {
+        categories: string[];
+        priceRange: [number, number];
+        rating: number | null;
+        inStock: boolean;
+        onSale: boolean;
+    };
+    sortBy: string;
+
+    setProducts: (products: Producttype[]) => void;
+    setFilters: (filters: Partial<Store['filters']>) => void;
+    clearFilters: () => void;
+    sortProducts: (sortBy: string) => void;
+}
