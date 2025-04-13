@@ -1,6 +1,6 @@
 "use client"
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header, ColorProvider, Wrapper } from "@/components"
+import { Header, Wrapper } from "@/components"
 import "./globals.css";
 
 const geistSans = Geist({

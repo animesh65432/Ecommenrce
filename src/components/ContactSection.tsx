@@ -1,10 +1,10 @@
 "use client"
 
 import React from "react"
-import { usethemecolor } from "@/components/ColorProvider"
+import { useThemeColor } from "@/components/ColorProvider"
 
 const ContactSection = () => {
-    const { color } = usethemecolor()
+    const { color } = useThemeColor()
 
     return (
         <section
@@ -16,7 +16,7 @@ const ContactSection = () => {
                     Get in Touch
                 </h2>
                 <p className="mt-4 text-lg">
-                    We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.
+                    We&apos;d love to hear from you! Fill out the form below and we&apos;ll get back to you as soon as possible.
                 </p>
             </div>
 

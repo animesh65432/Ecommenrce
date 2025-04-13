@@ -36,7 +36,7 @@ const ColorProvider: React.FC<Props> = ({ children }) => {
 }
 
 
-export const usethemecolor = () => {
+export const useThemeColor = () => {
     const { color, ontoggole } = useContext(colorstore)
     return { color, ontoggole }
 }

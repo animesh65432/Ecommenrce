@@ -6,11 +6,11 @@ import {
     SheetTitle
 } from "@/components/ui/sheet"
 import { Icon } from "@/components"
-import { usethemecolor } from './ColorProvider'
+import { useThemeColor } from './ColorProvider'
 
 
 const MobileHeader: React.FC = () => {
-    const { color } = usethemecolor()
+    const { color } = useThemeColor()
     return (
         <Sheet>
             <SheetTrigger>

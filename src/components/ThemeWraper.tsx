@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import { usethemecolor } from './ColorProvider'
+import { useThemeColor } from './ColorProvider'
 
 type Props = {
     children: React.ReactNode
@@ -8,7 +8,7 @@ type Props = {
 
 const ThemedWrapper: React.FC<Props> = ({ children }) => {
 
-    const { color } = usethemecolor()
+    const { color } = useThemeColor()
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {

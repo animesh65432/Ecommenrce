@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
 import { Icon, MobileHeader } from "@/components"
-import { usethemecolor } from "@/components/ColorProvider"
+import { useThemeColor } from "@/components/ColorProvider"
 
 const Header: React.FC = () => {
-    const { color, ontoggole } = usethemecolor()
+    const { color, ontoggole } = useThemeColor()
     return (
         <header className='w-full h-[10vh] flex md:justify-around justify-around items-center p-8  sticky'>
             <nav className='md:hidden block'>
