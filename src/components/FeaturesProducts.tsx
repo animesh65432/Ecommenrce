@@ -9,20 +9,21 @@ const FeaturesProducts: React.FC = () => {
     const [loading, GetProducts] = useProduct()
     const products = useStore((store) => store.products).slice(0, 3)
 
-    const GetProductsitems = useCallback(async () => {
+    const GetProductsitems = async () => {
         try {
             await GetProducts()
         } catch (error) {
             console.log(error)
         }
-    }, [products])
+    }
 
     useEffect(() => {
         GetProductsitems()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (loading) {
-        return <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 place-items-center'>
+        return <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 place-items-center lg:m-0 m-auto'>
             <ProductsSkeleton />
             <ProductsSkeleton />
             <ProductsSkeleton />

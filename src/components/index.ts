@@ -12,5 +12,10 @@ import ProductsSkeleton from "./ProductsSkeleton";
 import Product from "./Product";
 import Products from "./home/Products";
 import FilterSection from "./home/FilterSection";
-
-export { Home, Header, Icon, ColorProvider, Wrapper, ThemedWrapper, MobileHeader, Hero, ContactSection, FeaturesProducts, ProductsSkeleton, Product, FilterSection, Products }
+import DetailsProduct from "./product/DetailsProduct";
+import HydrateStore from "./HydrateStore";
+import Cart from "./carts/Cart";
+import Wishlist from "./wishlist/Wishlist";
+import SignIn from "./user/Login";
+import SignUp from "./user/Singup";
+export { Home, Header, Icon, ColorProvider, Wrapper, ThemedWrapper, MobileHeader, Hero, ContactSection, FeaturesProducts, ProductsSkeleton, Product, FilterSection, Products, DetailsProduct, HydrateStore, Wishlist, Cart, SignIn, SignUp }

@@ -18,10 +18,11 @@ const Products = () => {
 
     useEffect(() => {
         GetProductsitems()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (loading) {
-        return <div className='grid  md:grid-cols-2 grid-cols-1 gap-4'>
+        return <div className='grid  md:grid-cols-2 grid-cols-1 lg:gap-4 place-content-center '>
             <ProductsSkeleton />
             <ProductsSkeleton />
             <ProductsSkeleton />

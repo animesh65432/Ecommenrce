@@ -1,6 +1,6 @@
 "use client"
 import { Geist, Geist_Mono } from "next/font/google";
-import { Header, Wrapper, ContactSection } from "@/components"
+import { Header, Wrapper, ContactSection, HydrateStore } from "@/components"
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,6 +25,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Wrapper>
+          <HydrateStore />
           <Header />
           {children}
           <ContactSection />
