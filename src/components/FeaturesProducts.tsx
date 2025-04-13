@@ -19,7 +19,7 @@ const FeaturesProducts: React.FC = () => {
 
     useEffect(() => {
         GetProductsitems()
-    }, [products])
+    }, [])
 
     if (loading) {
         return <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2 place-items-center'>
