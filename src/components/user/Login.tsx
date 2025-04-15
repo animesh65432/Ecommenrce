@@ -8,6 +8,7 @@ import axios from "axios";
 import Icons from "../Icon";
 import { useStore } from "@/store/store";
 import { useRouter } from "next/navigation"
+import { backendurl } from "@/utils"
 
 interface SignInData {
     email: string;
@@ -35,10 +36,10 @@ const SignIn = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const response = await axios.post("https://savewave-backend.onrender.com/users/loginuser", formData);
+            const response = await axios.post(`${backendurl}/users/loginuser`, formData);
             console.log("User logged in:", response.data?.user);
             setuer(response.data?.user)
-            router.push("/")
+            router.push("/home")
         } catch (error) {
             console.error("Login error:", error);
         } finally {

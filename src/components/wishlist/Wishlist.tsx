@@ -9,9 +9,7 @@ import Image from "next/image";
 
 
 const Wishlist = () => {
-    const wishlist = useStore((state) => state.wishlist);
-    const removeFromWishlist = useStore((state) => state.removewishlist);
-    const addToCart = useStore((state) => state.additemcart);
+    const { wishlist, removewishlist, additemcart } = useStore();
 
     if (wishlist.length === 0) {
         return (
@@ -34,11 +32,13 @@ const Wishlist = () => {
                         whileTap={{ scale: 0.98 }}
                     >
                         <Card className="rounded-xl overflow-hidden shadow-sm border hover:shadow-md transition duration-300 h-full flex flex-col">
-                            <Image
-                                src={product.image}
-                                alt={product.title}
-                                className="h-48 object-contain bg-white w-full p-4"
-                            />
+                            <div className="relative h-48 object-contain bg-white w-full p-4">
+                                <Image
+                                    src={product.image}
+                                    alt={product.title}
+                                    fill
+                                />
+                            </div>
                             <CardContent className="flex-1 flex flex-col justify-between p-4">
                                 <div>
                                     <h2 className="font-medium text-sm sm:text-base text-gray-800 mb-1 line-clamp-2">
@@ -58,14 +58,14 @@ const Wishlist = () => {
                                 <div className="flex flex-col sm:flex-row gap-3 mt-auto">
                                     <Button
                                         className="w-full sm:w-1/2"
-                                        onClick={() => addToCart(product)}
+                                        onClick={() => additemcart(product)}
                                     >
                                         Add to Cart
                                     </Button>
                                     <Button
                                         variant="destructive"
                                         className="w-full sm:w-1/2"
-                                        onClick={() => removeFromWishlist(product.id)}
+                                        onClick={() => removewishlist(product.id)}
                                     >
                                         Remove
                                     </Button>

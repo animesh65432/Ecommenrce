@@ -23,7 +23,7 @@ const HydrateStore = () => {
             setwishlist(JSON.parse(wishlists))
         }
         if (storeuser) {
-            setwishlist(JSON.parse(storeuser))
+            setuer(JSON.parse(storeuser))
         }
 
     }, [setProducts, setcart, setwishlist, setuer]);

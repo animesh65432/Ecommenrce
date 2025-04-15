@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { use } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Producttype } from "@/types";
 import Icon from "./Icon";
@@ -21,6 +21,7 @@ const Product: React.FC<Props> = ({ product }) => {
 
     const addtocart = (product: Producttype) => {
         if (user.email.length === 0) {
+            console.log(user.email)
             console.log("User not logged in, redirecting to /user/login");
             router.push("/user/login");
             return;
@@ -30,10 +31,12 @@ const Product: React.FC<Props> = ({ product }) => {
 
     const addToWish = (product: Producttype) => {
         if (user.email.length === 0) {
+            console.log(user)
             console.log("User not logged in, redirecting to /user/login");
             router.push("/user/login");
             return;
         }
+        console.log(product, "add the product")
         additemwishlist(product);
     };
 

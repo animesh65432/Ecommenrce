@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import axios from "axios";
 import Icons from "../Icon";
+import { backendurl } from "@/utils"
 
 interface FormData {
     name: string;
@@ -33,7 +34,7 @@ const SignUp = () => {
         e.preventDefault();
         try {
             setloading(true)
-            await axios.post("https://savewave-backend.onrender.com/users/singuptheuser", formData)
+            await axios.post(`${backendurl}/users/singuptheuser`, formData)
         } catch (error) {
             console.log(error)
         }

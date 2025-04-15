@@ -34,11 +34,13 @@ const CartPage = () => {
                         >
                             <Card className="w-full">
                                 <CardContent className="flex items-center gap-4 p-4">
-                                    <Image
-                                        src={product.image}
-                                        alt={product.title}
-                                        className="w-24 h-24 object-contain"
-                                    />
+                                    <div className=" relative w-24 h-24 object-contain">
+                                        <Image
+                                            src={product.image}
+                                            alt={product.title}
+                                            fill
+                                        />
+                                    </div>
                                     <div className="flex-1">
                                         <h2 className="text-lg font-semibold">{product.title}</h2>
                                         <p className="text-sm text-gray-500">{product.category}</p>

@@ -84,7 +84,9 @@ export const useStore = create<Store>((set) => ({
         }
     }),
     additemwishlist: (product) => set((state) => {
+        console.log(product, "add the product")
         if (typeof window !== "undefined") {
+            console.log(state)
             localStorage.setItem("wishlist", JSON.stringify([...state.wishlist, product]));
         }
         return {
